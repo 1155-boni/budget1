@@ -1,0 +1,191 @@
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Example for cards */
+.card {
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 800px; /* increased from 600px */
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;     /* more padding */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+}
+
+.card {
+  
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 20px;         /* was 15px */
+  font-size: 1.2rem;  
+}
+
+
+.card {
+    flex: 1;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.balance-card {
+  background-color: #e0f7fa;
+}
+
+.income-card {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.expense-card {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;              /* allow wrapping */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form select,
+.filter select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.form input,
+.form select,
+.form button {
+  flex: 1 1 48%;                /* make elements grow and wrap */
+  padding: 12px;
+  font-size: 1rem;
+  min-width: 140px;
+}
+
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+
+.form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  flex: 1 1 100%;               /* make the button full width on its own line */
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.form button:hover {
+  background-color: #1976d2;
+}
+#transactions {
+  list-style: none;
+  padding: 0;
+}
+
+#transactions li {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+#transactions li {
+  font-size: 1rem;
+  padding: 14px;      /* slightly bigger */
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    gap: 20px;
+  }
+
+  .form,
+  .filter {
+    gap: 15px;
+  }
+}
+
+
+.income {
+  border-color: #4caf50;
+  color: #388e3c;
+}
+
+.expense {
+  border-color: #f44336;
+  color: #c62828;
+}
+
+.delete-btn {
+  cursor: pointer;
+  color: #888;
+  margin-left: 10px;
+  font-weight: bold;
+}

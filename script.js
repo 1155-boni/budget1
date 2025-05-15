@@ -30,7 +30,7 @@ function renderTransactions() {
   <small>${new Date(t.date).toLocaleDateString()}</small>
   <span>Ksh ${t.amount.toFixed(2)}</span>
   <span class="edit-btn" onclick="editTransaction(${t.id})">✏️</span>
-  <span class="delete-btn" onclick="deleteTransaction(${t.id})">×</span>
+  <span class="delete-btn" onclick="deleteTransaction(${t.id})">🗑️</span>
 `;
 
     list.appendChild(li);

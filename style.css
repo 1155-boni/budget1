@@ -1,191 +1,261 @@
+/* style.css - BASE STYLES (These are examples, integrate with your existing styles) */
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box; /* Include padding in element's total width and height */
 }
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Example for cards */
-.card {
-  background-color: var(--card-bg);
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
-}
-
 
 .container {
-  max-width: 800px; /* increased from 600px */
-  margin: auto;
-  background: #ffffff;
-  padding: 30px;     /* more padding */
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
 }
 
-
 h1 {
-  text-align: center;
-  margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
 }
 
 .cards {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 25px;
-
+    display: flex; /* Makes cards display in a row */
+    justify-content: space-around;
+    gap: 15px; /* Space between cards */
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Allow cards to wrap to next line if needed */
 }
 
 .card {
-  
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    padding: 20px;         /* was 15px */
-  font-size: 1.2rem;  
+    background-color: #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 6px;
+    text-align: center;
+    flex: 1; /* Allows cards to grow and shrink */
+    min-width: 180px; /* Minimum width for each card */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.balance-card { background-color: #d6e9f8; } /* Light blue */
+.income-card { background-color: #d4edda; } /* Light green */
+.expense-card { background-color: #f8d7da; } /* Light red */
 
-.card {
-    flex: 1;
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  padding: 15px;
-  margin: 10px 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.card h2, .card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
 }
 
-.balance-card {
-  background-color: #e0f7fa;
+.card p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #222;
 }
 
-.income-card {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-.expense-card {
-  background-color: #ffebee;
-  color: #c62828;
-}
-
-.form {
-  display: flex;
-  flex-wrap: wrap;              /* allow wrapping */
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.form select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.form select,
-.filter select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-.form input,
-.form select,
-.form button {
-  flex: 1 1 48%;                /* make elements grow and wrap */
-  padding: 12px;
-  font-size: 1rem;
-  min-width: 140px;
-}
+#balance { color: #007bff; }
+#income { color: #28a745; }
+#expense { color: #dc3545; }
 
 
+/* Filter Section */
 .filter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: right; /* Align filter to the right on larger screens */
+}
+
+.filter label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 
-.form input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Add Transaction Form */
+.form {
+    display: flex;
+    flex-wrap: wrap; /* Allow form elements to wrap */
+    gap: 10px; /* Space between form elements */
+    margin-bottom: 25px;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form select {
+    flex: 1; /* Allow inputs to grow */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px; /* Minimum width for form fields */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .form button {
-  flex: 1 1 100%;               /* make the button full width on its own line */
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Allow button to grow on smaller screens */
 }
 
 .form button:hover {
-  background-color: #1976d2;
+    background-color: #0056b3;
 }
+
+
+/* Transactions List */
 #transactions {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 #transactions li {
-  background: #f1f1f1;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-left: 5px solid;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-#transactions li {
-  font-size: 1rem;
-  padding: 14px;      /* slightly bigger */
+#transactions li.income-item { border-left: 5px solid #28a745; }
+#transactions li.expense-item { border-left: 5px solid #dc3545; }
+
+#transactions li span {
+    font-size: 0.95em;
+    color: #444;
 }
 
-@media (min-width: 1024px) {
-  .cards {
-    gap: 20px;
-  }
+#transactions li .amount {
+    font-weight: bold;
+}
 
-  .form,
-  .filter {
-    gap: 15px;
-  }
+#transactions li .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+#transactions li .delete-btn:hover {
+    background-color: #c82333;
 }
 
 
-.income {
-  border-color: #4caf50;
-  color: #388e3c;
+/* --- MOBILE RESPONSIVENESS (Media Queries) --- */
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust main title size */
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: stretch; /* Make cards fill width */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Add space between stacked cards */
+        min-width: unset; /* Remove min-width to allow full width */
+    }
+
+    .card h2, .card h3 {
+        font-size: 1.2em; /* Adjust card title sizes */
+    }
+
+    .card p {
+        font-size: 1.3em; /* Adjust balance/income/expense numbers */
+    }
+
+    .filter {
+        text-align: left; /* Align filter to left on mobile */
+        margin-bottom: 20px;
+    }
+
+    .form {
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 15px; /* More space between stacked form elements */
+    }
+
+    .form input,
+    .form select,
+    .form button {
+        width: 100%; /* Make them take full width */
+        min-width: unset; /* Remove min-width */
+        font-size: 1em; /* Ensure readable font size */
+    }
+
+    #transactions li {
+        flex-direction: column; /* Stack list item content */
+        align-items: flex-start; /* Align stacked content to the start */
+        margin-bottom: 12px;
+        padding: 10px 15px;
+    }
+
+    #transactions li span {
+        margin-bottom: 5px; /* Space between description and amount */
+    }
+
+    #transactions li .amount {
+        margin-top: 5px; /* Space between description and amount */
+        font-size: 1.1em;
+    }
+
+    #transactions li .delete-btn {
+        margin-top: 10px; /* Push delete button below text */
+        width: 100%; /* Make delete button full width */
+    }
 }
 
-.expense {
-  border-color: #f44336;
-  color: #c62828;
-}
+/* Optional: Even smaller screen adjustments (e.g., for very small phones) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px; /* Less overall padding */
+    }
 
-.delete-btn {
-  cursor: pointer;
-  color: #888;
-  margin-left: 10px;
-  font-weight: bold;
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .card {
+        padding: 12px 15px;
+    }
+
+    .card p {
+        font-size: 1.2em;
+    }
 }

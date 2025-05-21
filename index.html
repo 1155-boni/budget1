@@ -8,8 +8,6 @@
 </head>
 <body>
 
-
-
   <div class="container">
     <h1>Budget Tracker</h1>
 
@@ -27,8 +25,7 @@
         <p id="expense">Ksh 0.00</p>
       </div>
     </div>
- <!-- Filter Transactions -->
-<div class="filter">
+  <div class="filter">
   <label for="filter-type">Filter:</label>
   <select id="filter-type" onchange="renderTransactions()">
     <option value="all">All</option>
@@ -37,12 +34,9 @@
   </select>
 </div>
 
-
-
-<!-- Add Transaction Form -->
 <div class="form">
   <input type="text" id="description" placeholder="Description" />
-  
+
   <select id="type">
     <option value="income">Income</option>
     <option value="expense">Expense</option>
